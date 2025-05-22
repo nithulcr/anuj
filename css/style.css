@@ -45,7 +45,7 @@ section {
 }
 :root {
     --color1: #000;
-    --violet: green;
+    --violet: #07cd07;
     --color2: #f1f1f1;
     --white: #fff;
     --bg-light: rgba(147, 107, 232, 0.05);
@@ -58,7 +58,7 @@ section {
     --swiper-pagination-color: #fff;
     --color2: #0a0a0a;
     --white: #000;
-    --violet: #dcff8d;
+    /* --violet: #07cd07; */
     --bg-light: #080808f0;
 
 }
@@ -318,13 +318,14 @@ header {
 .logo img {
     max-width: 200px; 
     max-height: 60px; 
-    width: 50px;
+    width:200px;
     height: 50px;
     object-fit: contain;
     /* border-radius: 50%; */
+    filter: invert(1);
 }
 .dark .logo img {
-    filter: invert(1);
+    filter: invert(0);
 }
 .header-right {
     display: flex;
@@ -412,6 +413,9 @@ main{
     max-width: 800px;
     display: flex;
     height: 100%;
+}
+.banner-content img{
+    max-height: calc(100vh - 100px);
 }
 span.cursor_text {
     display: inline-block;

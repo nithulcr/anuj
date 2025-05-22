@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galtech Project</title>
+    <title>Anuj Kumar</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,7 +15,7 @@
         <div class="container_space header-align">
             <a href="index.html" class="logo small">
                 <img src="images/logo.png" alt="logo">
-                <h5>Developer.Mode</h5>
+                <!-- <h5>Developer.Mode</h5> -->
             </a>
             <div class="header-right">
                 <div class="nav">
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </section>
-        <section id="about-us" class="spacing-y">
+        <section id="about-us" class="spacing-y bg-light">
             <div class="container_space row row-align-center h-100">
                 <div class="col-lg-6 " data-aos="zoom-in" data-aos-delay="200" >
                     <img src="images/banner2.jpg" class="w-100  cursor-scale">
@@ -414,12 +414,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/js.js"></script>
     <script>
-        $(document).ready(function() {
-            AOS.init({
-                duration: 600, 
-              
-            });
+    $(document).ready(function () {
+        AOS.init({
+            duration: 400,
+            offset: window.innerHeight * 0.02, // triggers when element is in bottom 10%
+            anchorPlacement: 'bottom-bottom', // triggers when bottom of element hits bottom of screen
         });
+    });
     </script>
 </body>
 </html>
