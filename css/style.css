@@ -928,7 +928,7 @@ left: 60px;
     }
     .spacing-t {
         padding-top: 3rem; 
-        padding-bottom: 3rem;
+        /* padding-bottom: 3rem; */
     }
     .top-padd {
         padding-top: 60px;
@@ -953,7 +953,7 @@ left: 60px;
         gap: 0px;
     }
     section:nth-child(odd) .row{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .service-card {
