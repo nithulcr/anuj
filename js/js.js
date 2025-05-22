@@ -157,9 +157,13 @@ const swiper2 = new Swiper('.swiper-container2', {
 
       768: {
         spaceBetween: 30, 
-        slidesPerView: '3',
+        slidesPerView: '2',
       },
       990: {
+        spaceBetween: 30, 
+        slidesPerView: '3',
+      },
+      1300: {
         spaceBetween: 30, 
         slidesPerView: '4',
       },
