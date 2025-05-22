@@ -45,7 +45,7 @@ section {
 }
 :root {
     --color1: #000;
-    --violet: #673AB7;
+    --violet: green;
     --color2: #f1f1f1;
     --white: #fff;
     --bg-light: rgba(147, 107, 232, 0.05);
