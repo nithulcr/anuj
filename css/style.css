@@ -957,7 +957,20 @@ margin: 0;
       padding-right:40px;
     }
 }
+@media(max-width: 1024px) {
+   .main-banner-image{
+    display: none!important;
+   }
+   .spacing-t {
+    padding-bottom: 3rem;
+    }
+    .main-banner .col-lg-6:nth-child(odd) {
+        padding-right: 40px;
+        width: 100%;
+    }
+}
 @media (max-width: 768px) {
+    
     h1 {
         font-size: 8vw;
         line-height: 12vw;
