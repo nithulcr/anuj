@@ -1,16 +1,14 @@
 // menu clcik start
+// Menu click toggle
 $(".menu").on('click', function () {
-
-    var selector = $("body")
-
-    if (selector.hasClass('open')) {
-        
-        selector.removeClass('open');
-    } else {
-        
-        selector.addClass('open');
-    }
+  $("body").toggleClass('open');
 });
+
+// Close menu when any nav link is clicked
+$(".nav a").on('click', function () {
+  $("body").removeClass('open');
+});
+
 
 
 
@@ -173,27 +171,30 @@ const swiper2 = new Swiper('.swiper-container2', {
 
 //   popup start
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all contact buttons and the single modal
-    const buttons = document.querySelectorAll('.contact-btn');
-    const modal = document.querySelector('.popup-modal');
-    const closeButton = document.querySelector('.close-btn');
-    
-    // Add click event to each button
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            modal.style.display = 'block'; // Show the modal when any button is clicked
-        });
-    });
+  const buttons = document.querySelectorAll('.contact-btn');
+  const modal = document.querySelector('.popup-modal');
+  const closeButton = document.querySelector('.close-btn');
 
-    // Add click event to the close button
-    closeButton.addEventListener('click', () => {
-        modal.style.display = 'none'; // Hide the modal when the close button is clicked
-    });
+  // Add click event to each contact button
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          modal.style.display = 'block';        // Show the modal
+          document.body.classList.add('modal-open'); // Add class to body
+      });
+  });
 
-    // Close modal when clicking outside the content
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none'; // Hide the modal when clicking outside of it
-        }
-    });
+  // Close modal on close button click
+  closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';            // Hide the modal
+      document.body.classList.remove('modal-open'); // Remove class from body
+  });
+
+  // Close modal when clicking outside the modal content
+  window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+          modal.style.display = 'none';
+          document.body.classList.remove('modal-open');
+      }
+  });
 });
+
