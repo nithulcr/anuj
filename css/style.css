@@ -59,7 +59,7 @@ section {
     --color2: #0a0a0a;
     --white: #000;
     /* --violet: #07cd07; */
-    --bg-light: #080808f0;
+    --bg-light: #090909;
 
 }
 a{
@@ -167,6 +167,12 @@ section:nth-child(odd){
 }
 .row-align-center{
     align-items: center;
+}
+.row-align-stretch{
+    align-items: stretch;
+}
+.object-fit-cover{
+    object-fit: cover;
 }
 .col-lg-6{
     width: 50%;
@@ -302,10 +308,7 @@ header {
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
 }
 
-.scroll-down header {
 
-    top: -80px; 
-}
 
 .open header {
     overflow: visible;
@@ -345,6 +348,22 @@ header {
 .dark .logo img {
     filter: invert(0);
 }
+.logo-name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.logo-name p{
+    line-height: 14px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--violet);
+    text-transform: uppercase;
+}
+.logo-name h5{
+    font-family: "abeat-regular", sans-serif;
+    letter-spacing: 1px;
+}
 .header-right {
     display: flex;
     align-items: center;
@@ -373,7 +392,6 @@ header {
 }
 
 .nav-items.active {
-    font-weight: 600;
     color: var(--violet);
 }
 .nav-items:hover {
@@ -508,37 +526,6 @@ span.typed-text {
 }
 /* services design end */
 
-/* skills atrat */
-.skills {
-    max-width: 400px;
-    margin-top: 20px;
-
-  }
-  
-  .skill {
-    margin-bottom: 30px;
-  }
-  
-  .skill-title {
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  .progress-bar {
-    height: 8px;
-    background-color: var(--color2);
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .progress {
-    height: 100%;
-    background-color: var(--violet);
-    transition: width 0.3s ease;
-  }
-  
-/* skills end */
 
 /* swiper start */
 .swiper-container2 {
@@ -563,8 +550,12 @@ span.typed-text {
     border-radius: 10px;
     transition: transform 0.3s ease;
     overflow: hidden;
+    
   }
-  
+  .swiper-container2  .card:hover img {
+    transform: translateY(-10px);
+    filter: brightness(.8);
+  }
   /* .swiper-container2  .card:hover {
     transform: scale(1.05);
   } */
@@ -574,46 +565,25 @@ span.typed-text {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.3s ease;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/.8;
     border-radius: 10px;
+    transition: transform 0.3s ease;
   }
   
-  .swiper-container2  .card:hover .card-image {
-    opacity: 0.3;
-  }
+
   
   .swiper-container2  .card .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    overflow: hidden;
+
   }
-  .dark .swiper-container2  .card .content {
-    background: rgb(199 199 199 / 20%);  
-  }
+
   
-  .swiper-container2  .card:hover h3 {
-    /* color: var(--white); */
-    position: relative;
-    z-index: 9;
-  }
-  .dark .swiper-container2  .card:hover h3 {
-    color: var(--color1);
-  }
-  .swiper-container2  .card:hover .content {
-    opacity: 1;
-  }
+
+
   .swiper-container2  .swiper-slide{
     width: 340px;
     flex-shrink: 0;
@@ -628,10 +598,8 @@ span.typed-text {
 
   
    .swiper-container2  .card .content p {
-    margin: 10px 0 0;
     font-size: 1rem;
     line-height: 22px;
-    color: var(--color2);
     display: -webkit-box;
   -webkit-line-clamp: 7; 
   -webkit-box-orient: vertical;
@@ -765,119 +733,7 @@ footer{
 }
 /* footer end */
 
-/* popup start */
-/* Popup Modal Style */
-.modal-open{
-    overflow: hidden;
-}
-.popup-modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    align-content: center;
-}
 
-.popup-content {
-    position: relative;
-    background-color: var(--white);
-    padding: 30px;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 8px;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2rem;
-    cursor: pointer;
-}
-.form{
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 20px;
-    max-width: 460px;
-    justify-content: space-between;
- }
- .form-child{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-
-    position: relative;
- }
- .form-child.w-50{
-    width: 49%;
- }
- .form-child label{
-    position: absolute;
-    top: 0;
-    /* left: 20px; */
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .3s;
- }
- .phone-nummber.form-child label{
-left: 60px;
- }
- .form-child input::placeholder{
-    visibility: hidden;
-    font-size: 1rem;
-    color: black;
- }
- .dark .form-child input::placeholder{
-
-    color: white;
- }
- .form-child.phone-nummber input::placeholder{
-    visibility: visible;
- }
- .form-child *{
-    margin: 0;
- }
- .form-child input,  .form-child select, .file-upload label{
-    border: none;
-    border-bottom: 1px solid var(--color1);
-    outline: none;
-    height: 46px;
-    /* padding: 0 20px; */
-    background: none;
-    z-index: 99;
-    width: 100%;
- }
- .form-child input:focus ~ label,  .form-child select:focus ~ label{
-    top: 0px;
-    background-color: white;
-    z-index: 99;
-    padding: 5px;
-    font-size: .9rem;
- }
-
- .form-child input:valid  ~ label,  .form-child select:valid  ~ label{
-    top: 0px;
-    background-color: white;
-    z-index: 99;
-    padding: 5px 0;
-    font-size: .6rem;
-}
-.dark .form-child input{
-    color: white;
-}
-.dark .form-child input:focus ~ label, .dark  .form-child select:focus ~ label, .dark  .form-child input:valid  ~ label,  .dark .form-child select:valid  ~ label{
-    background-color: #000000;
-}
-
-
-
-/* popup end */
 
 /* experience design start */
 
@@ -906,7 +762,7 @@ left: 60px;
 
 
   .project-card .logo {
-    width: 90px;
+    width: 120px;
     border-radius: 16px;
     transition: transform 0.3s ease;
     margin: auto;
@@ -916,8 +772,8 @@ left: 60px;
   .project-card h3 {
     font-size: 18px;
     line-height: 24px;
-    margin-top:15px;
-    margin-bottom: 10px;
+    margin-top:10px;
+    margin-bottom: 4px;
 
   }
   .project-card h5{
@@ -927,7 +783,7 @@ left: 60px;
   }
   .project-card p{
     font-size: 14px;
-    color:gray;
+    /* color:gray; */
 margin: 0;
     line-height: 22px;
   }
@@ -983,12 +839,16 @@ margin: 0;
     body.open{
         overflow: hidden;
     }
+    .main-banner .col-lg-6:nth-child(odd) {
+        padding-right: 0px;
+    }
     .btn {
 
         min-width: 150px;
-        font-size: 16px;
+        font-size: 14px;
         padding: .8rem 1rem;
-        gap: 10px;
+        gap: 6px;
+        min-height: 45px;
     }
 .container_space{
   padding-left:20px;
@@ -1084,14 +944,8 @@ margin: 0;
     .logo h5 {
         font-size: 1rem;
     }
-    .swiper-container2 .card .content{
-        position: relative;
-        padding: 0 10px;
-        opacity: 1;
-        background-color: initial!important;
-    }
+
     .swiper-container2 .card .content p{
-        color: var(--color1);
         font-size: .8rem;
         margin-top: 0;
     }

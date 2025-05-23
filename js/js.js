@@ -10,23 +10,15 @@ $(".nav a").on('click', function () {
 });
 
 
+$(".contact_connect").on('click', function () {
+  var selector = $("body");
 
-
-let lastScrollTop = 0;
-
-window.addEventListener("scroll", function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (currentScroll > lastScrollTop) {
-        // Scrolling down
-        document.body.classList.add("scroll-down");
-    } else {
-        // Scrolling up
-        document.body.classList.remove("scroll-down");
-    }
-    
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
-}, false);
+  if (selector.hasClass('open_contact_connect')) {
+      selector.removeClass('open_contact_connect');
+  } else {
+      selector.addClass('open_contact_connect');
+  }
+});
 
 
 
@@ -155,15 +147,15 @@ const swiper2 = new Swiper('.swiper-container2', {
 
       768: {
         spaceBetween: 30, 
-        slidesPerView: '2',
+        slidesPerView: '1.5',
       },
       990: {
         spaceBetween: 30, 
-        slidesPerView: '3',
+        slidesPerView: '2',
       },
       1300: {
         spaceBetween: 30, 
-        slidesPerView: '4',
+        slidesPerView: '3',
       },
     },
   });
