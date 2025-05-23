@@ -331,7 +331,7 @@ header {
 }
 .logo .favicon {
     /* max-width: 200px;  */
-    max-height: 40px; 
+    max-height: 50px; 
     /* width:200px; */
     height: 100%;
     object-fit: contain;
@@ -340,7 +340,7 @@ header {
 }
 .logo .logo-img{
     filter: invert(1);
-    max-height: 40px; 
+    max-height: 50px; 
 }
 .dark .logo img {
     filter: invert(0);
@@ -1081,6 +1081,13 @@ margin: 0;
       .head-text-bold {
         font-size: 2rem;
         line-height: 40px;
+    }
+    .logo .favicon {
+        max-height: 40px; 
+    
+    }
+    .logo .logo-img{
+        max-height: 40px; 
     }
 
 }
