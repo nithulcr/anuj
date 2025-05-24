@@ -42,6 +42,7 @@ body, html {
 }
 section {
     background-color: var(--white);
+    position: relative;
 }
 :root {
     --color1: #000;
@@ -191,7 +192,67 @@ section:nth-child(odd){
     width: 25%;
 }
 /* row end */
-
+.shape1 {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #12be2f2b -4.46%, #0909094f 66.67%);
+    filter: blur(30px);
+    animation: 12s infinite shape1;
+    opacity: .5;
+}
+.shape2 {
+    position: absolute;
+    left: auto;
+    right: 20%;
+    top: 20%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #12be2f2b -4.46%, #0909094f 66.67%);
+    filter: blur(30px);
+    animation: 12s infinite shape2;
+    opacity: .5;
+}
+@keyframes shape1 {
+    0% {
+        transform: translateY(-50%) rotate(90deg);
+        left: 10%;
+        top: 40%;
+    }
+    50% {
+        transform: translateY(-50%) rotate(360deg);
+        left: 20%;
+        top: 60%;
+    }
+    100% {
+        transform: translateY(-50%) rotate(45deg);
+        left: 10%;
+        top: 40%;
+    }
+}
+@keyframes shape2 {
+    0% {
+        transform: translateY(-50%) rotate(90deg);
+        right: 10%;
+        top: 40%;
+    }
+    50% {
+        transform: translateY(-50%) rotate(360deg);
+        right: 20%;
+        top: 60%;
+    }
+    100% {
+        transform: translateY(-50%) rotate(45deg);
+        right: 10%;
+        top: 40%;
+    }
+}
 /* cursor style */
 .cursor {
     position: fixed;
@@ -496,7 +557,11 @@ span.typed-text {
     flex-direction: column;
     gap: 15px;
     min-height: 200px;
-    justify-content: center;
+    /* justify-content: center; */
+    height: 100%;
+}
+.service-card-icon{
+    width: 50px;
 }
 .hover-img{
     position: absolute;
@@ -521,6 +586,12 @@ span.typed-text {
 .service-card:hover .hover-img{
     opacity: 1;
 }
+.dark .service-card .service-card-icon{
+  filter: invert(1);
+}
+.service-card:hover .service-card-icon{
+    filter: invert(1);
+  }
 .service-card > *:not(.hover-img){
     position: relative;
     z-index: 1;
