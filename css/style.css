@@ -572,7 +572,7 @@ span.typed-text {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.3s ease;
-    aspect-ratio: 1/.8;
+    aspect-ratio: 1;
     border-radius: 10px;
     transition: transform 0.3s ease;
   }
@@ -599,13 +599,22 @@ span.typed-text {
    .swiper-container2  .swiper-slide h3 {
     margin: 0;
     font-size: 1.2rem;
+    line-height: 1.6rem;
+padding:15px 0 10px 0;
+
     /* text-transform: uppercase; */
     text-align: center;
   }
-
+  .swiper-container2  .swiper-slide .card .content p.project_type {
+    margin: 0;
+padding:5px 0;
+font-size: 18px;
+line-height: 26px;
+    text-align: center;
+  }
   
    .swiper-container2  .card .content p {
-    font-size: 1rem;
+    font-size: 14px;
     line-height: 22px;
     display: -webkit-box;
   -webkit-line-clamp: 7; 
@@ -806,6 +815,9 @@ margin: 0;
     flex-direction: column;
     text-align: right;
     transition: .3s;
+    border-radius: 8px 0 0 8px;
+    overflow: hidden;
+    background-color: var(--color1);
    
 }
 ul.mysticky-social-icons li{
@@ -814,7 +826,7 @@ ul.mysticky-social-icons li{
     vertical-align: bottom;
     padding: 10px;
     cursor: pointer;
-     background-color: black;
+
      cursor: pointer;
     
 }
@@ -822,16 +834,16 @@ ul.mysticky-social-icons li a{
     display: flex;
     align-items: center;
     /* gap: 10px; */
-    background-color: black;
 }
 
 ul.mysticky-social-icons li img{
     width: 23px;
     height: 23px;
+    filter: invert(1);
 
 }
 .dark ul.mysticky-social-icons li img{
-    filter: invert(1);
+    filter: invert(0);
 }
 ul.mysticky-social-icons li:hover img{
     animation-name: jello;
