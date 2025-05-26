@@ -203,7 +203,7 @@ section:nth-child(odd){
     background: linear-gradient(90deg, #12be2f2b -4.46%, #0909094f 66.67%);
     filter: blur(30px);
     animation: 12s infinite shape1;
-    opacity: .5;
+    opacity: .3;
 }
 .shape2 {
     position: absolute;
@@ -217,7 +217,7 @@ section:nth-child(odd){
     background: linear-gradient(90deg, #12be2f2b -4.46%, #0909094f 66.67%);
     filter: blur(30px);
     animation: 12s infinite shape2;
-    opacity: .5;
+    opacity: .3;
 }
 @keyframes shape1 {
     0% {
@@ -256,10 +256,10 @@ section:nth-child(odd){
 /* cursor style */
 .cursor {
     position: fixed;
-    width: 2.5rem; 
-    height: 2.5rem; 
-    margin-left: -1.25rem;
-    margin-top: -1.25rem; 
+    width: 1rem; 
+    height: 1rem; 
+    margin-left: -.5rem;
+    margin-top: -.5rem; 
     border-radius: 50%;
     border: 0.125rem solid var(--color1); 
     transition: transform 0.3s ease;
@@ -270,14 +270,14 @@ section:nth-child(odd){
 }
 
 .grow, .grow-small {
-    transform: scale(4);
+    transform: scale(6);
     background: white;
     mix-blend-mode: difference!important;
     border: none;
 }
 
 .grow-small {
-    transform: scale(2);
+    transform: scale(3);
 }
 /* cursor style end */
 .btn {
@@ -416,8 +416,8 @@ header {
 }
 .logo-name p{
     line-height: 14px;
-    font-size: 13px;
-    letter-spacing: 3px;
+    font-size: 12px;
+    /* letter-spacing: 3px; */
     color: var(--green);
     text-transform: uppercase;
 }
