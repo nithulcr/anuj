@@ -192,67 +192,7 @@ section:nth-child(odd){
     width: 25%;
 }
 /* row end */
-.shape1 {
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    transform: translateY(-50%) rotate(45deg);
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: linear-gradient(90deg, #12be2f2b -4.46%, #0909094f 66.67%);
-    filter: blur(30px);
-    animation: 12s infinite shape1;
-    opacity: .3;
-}
-.shape2 {
-    position: absolute;
-    left: auto;
-    right: 20%;
-    top: 20%;
-    transform: translateY(-50%) rotate(45deg);
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: linear-gradient(90deg, #12be2f2b -4.46%, #0909094f 66.67%);
-    filter: blur(30px);
-    animation: 12s infinite shape2;
-    opacity: .3;
-}
-@keyframes shape1 {
-    0% {
-        transform: translateY(-50%) rotate(90deg);
-        left: 10%;
-        top: 40%;
-    }
-    50% {
-        transform: translateY(-50%) rotate(360deg);
-        left: 20%;
-        top: 60%;
-    }
-    100% {
-        transform: translateY(-50%) rotate(45deg);
-        left: 10%;
-        top: 40%;
-    }
-}
-@keyframes shape2 {
-    0% {
-        transform: translateY(-50%) rotate(90deg);
-        right: 10%;
-        top: 40%;
-    }
-    50% {
-        transform: translateY(-50%) rotate(360deg);
-        right: 20%;
-        top: 60%;
-    }
-    100% {
-        transform: translateY(-50%) rotate(45deg);
-        right: 10%;
-        top: 40%;
-    }
-}
+
 /* cursor style */
 .cursor {
     position: fixed;
@@ -921,7 +861,9 @@ ul.mysticky-social-icons li:hover img{
     animation-duration: 1s;
     animation-iteration-count: 1;
 }
-@media(min-width: 1366px){
+
+ 
+@media(min-width: 1300px){
     
     .container_space{
         max-width: 1526.4px;
@@ -932,6 +874,67 @@ ul.mysticky-social-icons li:hover img{
     }
     .nav{
         gap: 40px;
+    }
+    .shape1 {
+        position: absolute;
+        left: 10%;
+        top: 20%;
+        transform: translateY(-50%) rotate(45deg);
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, #12be2f2b -4.46%, #0909094f 66.67%);
+        filter: blur(30px);
+        animation: 12s infinite shape1;
+        opacity: .3;
+    }
+    .shape2 {
+        position: absolute;
+        left: auto;
+        right: 20%;
+        top: 20%;
+        transform: translateY(-50%) rotate(45deg);
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, #12be2f2b -4.46%, #0909094f 66.67%);
+        filter: blur(30px);
+        animation: 12s infinite shape2;
+        opacity: .3;
+    }
+    @keyframes shape1 {
+        0% {
+            transform: translateY(-50%) rotate(90deg);
+            left: 10%;
+            top: 40%;
+        }
+        50% {
+            transform: translateY(-50%) rotate(360deg);
+            left: 20%;
+            top: 60%;
+        }
+        100% {
+            transform: translateY(-50%) rotate(45deg);
+            left: 10%;
+            top: 40%;
+        }
+    }
+    @keyframes shape2 {
+        0% {
+            transform: translateY(-50%) rotate(90deg);
+            right: 10%;
+            top: 40%;
+        }
+        50% {
+            transform: translateY(-50%) rotate(360deg);
+            right: 20%;
+            top: 60%;
+        }
+        100% {
+            transform: translateY(-50%) rotate(45deg);
+            right: 10%;
+            top: 40%;
+        }
     }
 }
 
@@ -948,6 +951,7 @@ ul.mysticky-social-icons li:hover img{
     }
 }
 @media(max-width: 1024px) {
+    
    .main-banner-image{
     display: none!important;
    }
