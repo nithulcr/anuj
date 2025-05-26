@@ -1090,6 +1090,10 @@ ul.mysticky-social-icons li:hover img{
         font-size: .8rem;
         margin-top: 0;
     }
+    .swiper-container2 .swiper-slide .card .content p.project_type {
+        font-size: 15px;
+        line-height: 22px;
+    }
     .cursor{
         display: none;
     }
