@@ -210,14 +210,20 @@ section:nth-child(odd){
 }
 
 .grow, .grow-small {
-    transform: scale(6);
+    width: 5rem; 
+    height: 5rem; 
     background: white;
     mix-blend-mode: difference!important;
     border: none;
+      margin-left: -2.5rem;
+    margin-top: -2.5rem; 
 }
 
 .grow-small {
-    transform: scale(3);
+     width: 3rem; 
+    height: 3rem; 
+      margin-left: -1.5rem;
+    margin-top: -1.5rem; 
 }
 /* cursor style end */
 .btn {
@@ -361,6 +367,9 @@ header {
     color: var(--green);
     text-transform: uppercase;
 }
+    footer .logo-name p {
+        text-align: center;
+    }
 .logo-name h5{
     font-family: "abeat-regular", sans-serif;
     letter-spacing: 1px;
@@ -1086,6 +1095,7 @@ ul.mysticky-social-icons li:hover img{
         line-height: 12px;
         font-size: 10px;
     }
+
     .swiper-container2 .card .content p{
         font-size: .8rem;
         margin-top: 0;
