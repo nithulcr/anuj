@@ -86,7 +86,7 @@ if (window.innerWidth > 768) {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor_text");
 
-const textArray = ["Product Manager", "PMO Professional", "Certified Scrum Master"];
+const textArray = ["Project Manager", "PMO Professional", "Certified Scrum Master"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000; // Delay between current and next text
