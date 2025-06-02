@@ -44,7 +44,7 @@ section {
     --white: #fff;
     --bg-light: rgba(147, 107, 232, 0.05);
     --gray:gray;
-    --font-size-medium: .96rem;
+    --font-size-medium: .98rem;
 }
 :root .dark {
     --color1: #fff;
@@ -57,6 +57,13 @@ section {
 }
 a{
     text-decoration: none;
+}
+.content-p ul{
+    padding-left: 20px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
 }
 img {
     object-fit: contain;
@@ -446,12 +453,19 @@ main{
 .certificate-img{
     width: 100%;
     border-radius: 14px;
+    aspect-ratio: 1 / .8;
+    object-fit: cover;
 }
 .certificate-row .col-lg-4 {
     padding: 15px;
 }
 .certificate-row h4{
     margin-top: 20px;
+}
+.certificate-row h5{
+   text-align: center;
+   font-size: 18px;
+   font-weight: 400;
 }
   /* service start */
   /* services design start */
