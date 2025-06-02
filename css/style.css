@@ -1139,5 +1139,11 @@ ul.mysticky-social-icons li:hover img{
     #works .swiper-wrapper{
         padding-left: 20px;
     }
+    .service-card .hover-img{
+            opacity: 1;
+    }
+    .service-card *{
+            color: white;
+        }
 
 }
